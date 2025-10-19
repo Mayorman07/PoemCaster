@@ -1,0 +1,1 @@
+export const parisPoem = "Paris, a city of light and love, with secrets whispered from the stars above. Cafes and bridges, art in every view, a timeless romance, forever fresh and new.";
