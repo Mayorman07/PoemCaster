@@ -10,6 +10,8 @@ const poems = {
   "venice": venicePoem,
   "milan": milanPoem,
   "rome": romePoem,
+  "room": romePoem,
+  "pari": parisPoem,
   "paris": parisPoem
   // "paris": parisPoem, // Example for adding more
 };
