@@ -1,7 +1,7 @@
 // 1. Import poems from their individual files
 import { venicePoem } from './poems/venice.js';
-import { milanPoem } from './poems/milan.js';   
 import { romePoem } from './poems/rome.js'; 
+import { milanPoem } from './poems/milan.js';   
 import { parisPoem } from './poems/paris.js'; 
 // Add more imports here as you create more poem files (e.g., paris.js)
 
@@ -9,8 +9,8 @@ import { parisPoem } from './poems/paris.js';
 const poems = {
   "venice": venicePoem,
   "milan": milanPoem,
-  "rome": Poem,
-  "milan": milanPoem
+  "rome": romePoem,
+  "paris": parisPoem
   // "paris": parisPoem, // Example for adding more
 };
 const defaultMessage = "Lovely hearing your voice.";
@@ -158,4 +158,4 @@ if (!window.SpeechRecognition) {
         }, 100);
     }
 
-} // End of SpeechRecognition support check
+}
