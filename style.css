@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-    background: #2f3542 url('img/bg.jpg') no-repeat center center fixed;
+    background: #2f3542 url('img/fog.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
