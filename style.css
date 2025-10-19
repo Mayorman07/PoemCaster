@@ -1,0 +1,92 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden; /* Prevent unwanted scrolling */
+}
+
+body {
+    background: #2f3542 url('img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* Style the microphone image button */
+#micButton { /* Target the image by its ID */
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: transform 0.2s ease-in-out; /* Add a little effect */
+}
+
+#micButton:hover {
+    transform: scale(1.1); /* Make it slightly larger on hover */
+}
+
+/* Updated selector for the message boxes */
+#status, #poemOutput { /* Target the new IDs */
+    font-size: clamp(1.2em, 3vw, 1.5em);
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    max-width: 80vw;
+    word-wrap: break-word; /* Ensure long poems wrap */
+    min-height: 50px; /* Give them some minimum height */
+}
+
+/* Adjust status text style */
+#status {
+    color: #ccc; /* Lighter color for status */
+    font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #micButton {
+        width: 80px;
+        height: 80px;
+    }
+
+    #status, #poemOutput {
+        font-size: 1rem;
+        padding: 12px;
+        width: 95%; /* Use more width on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    #micButton {
+        width: 70px;
+        height: 70px;
+    }
+    #status, #poemOutput {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
