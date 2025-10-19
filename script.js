@@ -39,7 +39,7 @@ const poems = {
   // Add more cities with their lines and images here
 };
 
-const defaultMessage = "Lovely hearing your voice, the city you named is currently unavailable";
+const defaultMessage = "You have a lovely voice, sadly the city you named is currently unavailable";
 const defaultBackgroundImage = 'img/fog.jpg'; // Your desired default background
 
 // 3. Get HTML elements using the new IDs
