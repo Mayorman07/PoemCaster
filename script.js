@@ -1,21 +1,46 @@
 // 1. Import poems from their individual files
 import { venicePoem } from './poems/venice.js';
-import { romePoem } from './poems/rome.js'; 
-import { milanPoem } from './poems/milan.js';   
-import { parisPoem } from './poems/paris.js'; 
-// Add more imports here as you create more poem files (e.g., paris.js)
+import { milanPoem } from './poems/milan.js';
+import { romePoem } from './poems/rome.js';
+import { parisPoem } from './poems/paris.js';
+import { lagosPoem } from './poems/lagos.js';
+// Add more imports here as you create more poem files
 
-// 2. Create the central map for easy lookup (use lowercase keys)
+// 2. Create the central map including image paths (use lowercase keys)
 const poems = {
-  "venice": venicePoem,
-  "milan": milanPoem,
-  "rome": romePoem,
-  "room": romePoem,
-  "pari": parisPoem,
-  "paris": parisPoem
-  // "paris": parisPoem, // Example for adding more
+  "venice": {
+    lines: venicePoem,
+    image: 'img/venice.jpg' // Add image path for Venice
+  },
+  "lagos": {
+    lines: venicePoem,
+    image: 'img/lagos.jpg' // Add image path for Venice
+  },
+  "milan": {
+    lines: milanPoem,
+    image: 'img/milan.jpg' // Add image path for Milan
+  },
+  "rome": {
+    lines: romePoem,
+    image: 'img/rome.jpg' // Add image path for Rome
+  },
+  "room": { // Alias for Rome
+    lines: romePoem,
+    image: 'img/rome.jpg'
+  },
+  "paris": {
+    lines: parisPoem,
+    image: 'img/paris.jpg' // Add image path for Paris
+  },
+  "pari": { // Alias for Paris
+    lines: parisPoem,
+    image: 'img/paris.jpg'
+  }
+  // Add more cities with their lines and images here
 };
+
 const defaultMessage = "Lovely hearing your voice, the city you named is currently unavailable";
+const defaultBackgroundImage = 'img/fog.jpg'; // Your desired default background
 
 // 3. Get HTML elements using the new IDs
 const micButton = document.getElementById('micButton');
@@ -26,6 +51,19 @@ const poemOutput = document.getElementById('poemOutput');
 let isRecognizing = false;
 let isSpeaking = false;
 let voices = []; // Keep track of available voices
+
+// --- New Simple Function to Set Background ---
+function changeBackgroundImage(imagePath) {
+    if (imagePath) { // Only change if a path is provided
+        console.log("Changing background to:", imagePath);
+        document.body.style.backgroundImage = `url('${imagePath}')`;
+    }
+}
+
+// --- Set Initial Background on Load ---
+window.addEventListener('load', () => {
+    changeBackgroundImage(defaultBackgroundImage); // Set the default background when the page loads
+});
 
 // 5. Check for Speech Recognition support
 if (!("SpeechRecognition" in window)) {
@@ -54,23 +92,31 @@ if (!window.SpeechRecognition) {
         if (isSpeaking) return; // Don't process if already speaking
 
         const spokenWord = event.results[0][0].transcript.toLowerCase().trim();
-
-        // ✅ ADD THE CONSOLE LOG RIGHT HERE
         console.log("SpeechRecognition heard:", spokenWord);
-        console.log("User said:", spokenWord);
         statusDisplay.textContent = `You said: "${spokenWord}"`;
         poemOutput.textContent = ""; // Clear previous poem text display
 
-        // Lookup the poem using the spoken word
+        // Lookup the poem data
         if (poems[spokenWord]) {
-            const poemLines = poems[spokenWord]; // Get the array of lines
-            // Join lines with HTML line breaks for display
+            const poemData = poems[spokenWord];
+            const poemLines = poemData.lines;
+            const imagePath = poemData.image;
+
+            // ✅ CHANGE BACKGROUND IMAGE IMMEDIATELY
+            changeBackgroundImage(imagePath);
+
             poemOutput.innerHTML = poemLines.join('<br>');
-            speakMessage(poemLines); // Pass the array to the speak function
+
+            // Speak the message (without the background change in the callback)
+            speakMessage(poemLines); // REMOVED the callback from here
+
         } else {
-            // Default message is still a single string
+            // Default message - Change background immediately too
+            // ✅ CHANGE BACKGROUND IMAGE IMMEDIATELY
+            changeBackgroundImage(defaultBackgroundImage);
+
             poemOutput.textContent = defaultMessage;
-            speakMessage(defaultMessage);
+            speakMessage(defaultMessage); // REMOVED the callback from here
         }
     };
 
@@ -151,7 +197,7 @@ if (!window.SpeechRecognition) {
              statusDisplay.textContent = "Error speaking. Try again.";
         };
 
-        // Delay slightly might help ensure voice list is ready, especially on first load
+        // Delay slightly might help ensure voice list is ready
         setTimeout(() => {
             try {
                  window.speechSynthesis.speak(speech);
@@ -163,4 +209,4 @@ if (!window.SpeechRecognition) {
         }, 100);
     }
 
-}
+} // End of SpeechRecognition support check

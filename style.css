@@ -15,8 +15,13 @@ html, body {
 }
 
 body {
-    background: #2f3542 url('img/fog.jpg') no-repeat center center fixed;
-    background-size: cover;
+    /* REMOVED: Static background URL */
+    background-color: #2f3542; /* Fallback color */
+    background-size: cover; /* Keep */
+    background-position:  bottom center; /* Keep */
+    /* background-position:  bottom center;  */
+    /* background-position:  center center;  */
+    background-attachment: fixed; /* Keep */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -24,6 +29,8 @@ body {
     justify-content: center;
     text-align: center;
     padding: 20px;
+    /* ADDED: Smooth transition for background changes */
+    transition: background-image 1s ease-in-out;
 }
 
 h1, h2, h3 {
@@ -54,6 +61,9 @@ h1, h2, h3 {
     max-width: 80vw;
     word-wrap: break-word; /* Ensure long poems wrap */
     min-height: 50px; /* Give them some minimum height */
+    /* ADDED scrolling capability */
+    max-height: 60vh; /* Adjust height (e.g., 60% of viewport height) */
+    overflow-y: auto; /* Add vertical scrollbar ONLY if needed */
 }
 
 /* Adjust status text style */
