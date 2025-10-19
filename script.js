@@ -15,7 +15,7 @@ const poems = {
   "paris": parisPoem
   // "paris": parisPoem, // Example for adding more
 };
-const defaultMessage = "Lovely hearing your voice.";
+const defaultMessage = "Lovely hearing your voice, the city you named is currently unavailable";
 
 // 3. Get HTML elements using the new IDs
 const micButton = document.getElementById('micButton');
@@ -54,6 +54,9 @@ if (!window.SpeechRecognition) {
         if (isSpeaking) return; // Don't process if already speaking
 
         const spokenWord = event.results[0][0].transcript.toLowerCase().trim();
+
+        // ✅ ADD THE CONSOLE LOG RIGHT HERE
+        console.log("SpeechRecognition heard:", spokenWord);
         console.log("User said:", spokenWord);
         statusDisplay.textContent = `You said: "${spokenWord}"`;
         poemOutput.textContent = ""; // Clear previous poem text display
