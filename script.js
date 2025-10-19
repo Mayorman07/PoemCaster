@@ -13,7 +13,7 @@ const poems = {
     image: 'img/venice.jpg' // Add image path for Venice
   },
   "lagos": {
-    lines: venicePoem,
+    lines: lagosPoem,
     image: 'img/lagos.jpg' // Add image path for Venice
   },
   "milan": {
