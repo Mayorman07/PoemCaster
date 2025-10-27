@@ -73,7 +73,7 @@ h1, h2, h3 {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
     body {
         padding: 10px;
     }
