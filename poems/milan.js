@@ -1,6 +1,18 @@
 export const milanPoem = [
-    "Milan, where fashion's heart beats fast and bold,",
-    "a story in every stone, centuries old.",
-    "From Duomo's spires to the Last Supper's grace,",
-    "a city of art, at an unrelenting pace."
+    "Milan, a story in every stone, centuries old.",
+    "A fiery furnace cannot dim , the effervescence of my maiden",
+    "She is the torrent and the vessel, the brushstroke and the canvas",
+    "Her body is an inscription older than hieroglyphs",
+    "Her voice is full of poise itself , walking and speaking",
+    "When she is moved, even Poseidon falters, awed by the flood she commands",
+    "Swallows curse her for the way she glides",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+    "Her body is an inscription older than hieroglyphs",
+
   ];

@@ -1,6 +1,21 @@
 export const lagosPoem = [
     "Yellow buses hum, a vibrant beat,",
     "Rain-washed streets and restless feet.",
-    "From Island haze to mainland's steady roar,",
-    "Lagos breathes, and asks for more."
+    "Isn't it ironic we found love in Lagos?",
+    "Where fowl stench perfumes the air like lavender",
+    "Slapping unaware nostrils",
+    "In rickety yellow buses, adding to their woes of a hellish traffic",
+    "I said hello",
+    "You returned with a scowl",
+    "I said May i know you",
+    "You turned and laughed wickedly",
+    "That should have been my exit cue",
+    "Rather you reeled me in",
+    "Bewitching me with",
+    "The glint in your eyes",
+    "The pride in your shoulders",
+    "The sensual curve of your lips",
+    "For i have been locked in a spell",
+    "A prisoner of your love",
+    "With no allure for escape",
   ];
