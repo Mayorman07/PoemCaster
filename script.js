@@ -4,6 +4,10 @@ import { milanPoem } from './poems/milan.js';
 import { romePoem } from './poems/rome.js';
 import { parisPoem } from './poems/paris.js';
 import { lagosPoem } from './poems/lagos.js';
+import { vegasPoem } from './poems/vegas.js';
+import { santoriniPoem } from './poems/santorini.js';
+import { gizaPoem } from './poems/giza.js';
+
 // Add more imports here as you create more poem files
 
 // 2. Create the central map including image paths (use lowercase keys)
@@ -11,6 +15,30 @@ const poems = {
   "venice": {
     lines: venicePoem,
     image: 'img/venice.jpg' // Add image path for Venice
+  },
+  "santorini": {
+    lines: santoriniPoem,
+    image: 'img/santorini.jpg' // Add image path for Santorini
+  },
+  "vegas": {
+    lines: vegasPoem,
+    image: 'img/vegas.jpg' // Add image path for Vegas
+  },
+  "giza": {
+    lines: gizaPoem,
+    image: 'img/giza.jpg' // Add image path for Giza
+  },
+  "deezer": {
+    lines: gizaPoem,
+    image: 'img/giza.jpg' // Add image path for Giza
+  },
+  "visa": {
+    lines: gizaPoem,
+    image: 'img/giza.jpg' // Add image path for Giza
+  },
+  "geezer": {
+    lines: gizaPoem,
+    image: 'img/giza.jpg' // Add image path for Giza
   },
   "lagos": {
     lines: lagosPoem,
