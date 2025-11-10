@@ -200,7 +200,7 @@ if (!window.SpeechRecognition) {
         }
 
         const speech = new SpeechSynthesisUtterance(textToSpeak);
-        speech.rate = 0.8; //test this out first though
+        speech.rate = 0.75; //test this out first though
 
         // Optional: Voice selection
         const selectedVoice = voices.find(v => v.name.includes('Google UK English Female'));
