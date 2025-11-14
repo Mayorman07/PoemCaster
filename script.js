@@ -17,7 +17,7 @@ const poems = {
     lines: venicePoem,
     image: 'img/venice.jpg' // Add image path for Venice
   },
-  "dammy": {
+  "dummy": {
     lines: damiPoem,
     image: 'img/damii.jpg' // Add image path for Dami
   },
