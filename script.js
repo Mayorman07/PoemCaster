@@ -7,6 +7,7 @@ import { lagosPoem } from './poems/lagos.js';
 import { vegasPoem } from './poems/vegas.js';
 import { santoriniPoem } from './poems/santorini.js';
 import { gizaPoem } from './poems/giza.js';
+import { damiPoem } from './poems/dami.js';
 
 // Add more imports here as you create more poem files
 
@@ -15,6 +16,14 @@ const poems = {
   "venice": {
     lines: venicePoem,
     image: 'img/venice.jpg' // Add image path for Venice
+  },
+  "dammy": {
+    lines: damiPoem,
+    image: 'img/damii.jpg' // Add image path for Dami
+  },
+  "dami": {
+    lines: damiPoem,
+    image: 'img/dami.jpg' // Add image path for Dami
   },
   "santorini": {
     lines: santoriniPoem,
