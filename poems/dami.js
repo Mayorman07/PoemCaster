@@ -9,5 +9,5 @@ export const damiPoem = [
     "Be mine and mine alone, through the dusk , through the dawn, and far beyond the grip of time",
     "And i will be yours, through temptation, through shadows, through every stolen breath and treasured kiss",
     "Until the end refuses to come",
-
+    "Habeg be mine",
   ];
