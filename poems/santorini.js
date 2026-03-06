@@ -10,5 +10,5 @@ export const santoriniPoem = [
     "She met him  on the edge of the caldera, where the wind carries the whispers of the drowned",
     "He touched her - and the fire did not burn",
     "By morning, she wore her tan like an oath",
-    "An Santorini kept another secret benesth its white walls"
+    "An Santorini kept another secret beneath its white walls"
   ];
